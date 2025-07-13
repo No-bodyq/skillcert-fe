@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 border-b border-gray-100 bg-white">
+    <nav className="relative w-full flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 border-b border-gray-100 bg-white">
       <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
         <div className="flex items-center gap-2">
           <Image src="/logo.svg" alt="SkillCert logo" width={24} height={24} />
@@ -71,8 +71,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 md:hidden z-50">
-          <div className="px-4 py-4 space-y-4">
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg md:hidden z-50">
+          <div className="px-4 py-6 space-y-4">
             <div className="relative">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                 <Search width={18} height={18} />
@@ -80,27 +80,39 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Search"
-                className="w-full pl-10 pr-4 py-2 rounded-md bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-gray-200"
+                className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-gray-200"
               />
             </div>
-            <ul className="space-y-3 text-sm text-gray-700 font-semibold">
+            <ul className="space-y-2 text-sm text-gray-700 font-semibold">
               <li>
-                <a href="#" className="block py-2 hover:underline">
+                <a
+                  href="#"
+                  className="block py-3 hover:bg-gray-50 rounded-md px-2 transition-colors"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="block py-2 hover:underline">
+                <a
+                  href="#"
+                  className="block py-3 hover:bg-gray-50 rounded-md px-2 transition-colors"
+                >
                   Courses
                 </a>
               </li>
               <li>
-                <a href="#" className="block py-2 hover:underline">
+                <a
+                  href="#"
+                  className="block py-3 hover:bg-gray-50 rounded-md px-2 transition-colors"
+                >
                   Instructors
                 </a>
               </li>
               <li>
-                <a href="#" className="block py-2 hover:underline">
+                <a
+                  href="#"
+                  className="block py-3 hover:bg-gray-50 rounded-md px-2 transition-colors"
+                >
                   Partners
                 </a>
               </li>
