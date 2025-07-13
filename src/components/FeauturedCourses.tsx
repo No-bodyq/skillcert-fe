@@ -29,9 +29,11 @@ const courses = [
 
 export default function FeauturedCourses() {
   return (
-    <div className="w-full h-full flex flex-col gap-1 py-10">
-      <h1 className="text-[22px]/7 font-bold">Featured Courses</h1>
-      <div className="w-full h-full grid grid-cols-4 gap-4 py-5">
+    <div className="w-full h-full flex flex-col gap-4 sm:gap-6 md:gap-8 py-6 sm:py-8 md:py-10">
+      <h1 className="text-lg sm:text-xl md:text-[22px]/7 font-bold">
+        Featured Courses
+      </h1>
+      <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 py-5">
         {courses.map((course) => (
           <Course
             key={course.title}
